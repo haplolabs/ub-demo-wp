@@ -1,0 +1,7 @@
+.terragrunt-cache
+.terraform/
+backend_state.hcl
+.terraform.lock.hcl
+backend_config.hcl
+terra-old/
+*.off
