@@ -7,11 +7,12 @@ resource "digitalocean_volume" "data" {
 }
 
 resource "digitalocean_droplet" "web" {
-  count  = var.instance_count
-  region = var.region
-  image  = "ubuntu-20-04-x64"
-  name   = "${terraform.workspace}-${count.index}-web"
-  size   = "s-1vcpu-1gb-amd"
+  count  	= var.instance_count
+  region 	= var.region
+  image  	= "ubuntu-20-04-x64"
+  name   	= "${terraform.workspace}-${count.index}-web"
+  size   	= "s-1vcpu-1gb-amd"
+  vpc-uuid	= digitalocean_vpc_web-vpc.id
   ssh_keys = [
     data.digitalocean_ssh_key.terraform.id
   ]
