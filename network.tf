@@ -23,7 +23,7 @@ resource "digitalocean_certificate" "web" {
 # Load Balancer for distributing traffic amongst our web servers. Uses SSL     #
 # termination and forwards HTTPS traffic to HTTP internally                    #
 ################################################################################
-resource "digitalocean_loadbalancer" "web" {
+resource "digitalocean_loadbalancer" "public" {
 
   # The user friendly name of the load balancer
   name = "web-${var.region}"

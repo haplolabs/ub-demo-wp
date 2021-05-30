@@ -5,7 +5,7 @@ output "digitalocean_instance_urn" {
 
 # The fully qualified domain name of the load balancer
 output "web_loadbalancer_fqdn" {
-    value = digitalocean_record.web.fqdn
+    value = digitalocean_record.public.fqdn
 }
 
 # The Private IPv4 Addresses of the droplets
