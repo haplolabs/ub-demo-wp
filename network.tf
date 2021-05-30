@@ -1,6 +1,7 @@
 resource "digitalocean_loadbalancer" "public" {
-  name   = "${terraform.workspace}-loadbalancer"
-  region = var.region
+  name   	= "${terraform.workspace}-loadbalancer"
+  region 	= var.region
+  vpc_uuid      = digitalocean_vpc.web-vpc.id
 
   forwarding_rule {
     entry_port     = 80
