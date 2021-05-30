@@ -25,7 +25,7 @@ resource "digitalocean_droplet" "web" {
   image  	= var.image
 
   # My one true name
-  name 	        = "web-${var.name}-${var.region}-count.index +1}"
+  name          = "web-${var.name}-${var.region}-${count.index +1}"
 
   # Droplet size
   size   	= var.droplet_size
