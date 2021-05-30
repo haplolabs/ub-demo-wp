@@ -76,3 +76,8 @@ resource "digitalocean_firewall" "web" {
   }
 }
 
+resourse "digitalocean_vpc" "web-vpc" {
+    name		  = "dev-web-network"
+    region                = var.region
+    ip_range              = var.vpc_ip_range
+}

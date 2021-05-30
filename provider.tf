@@ -29,6 +29,11 @@ variable "do_token" {
 variable "pvt_key" {
 }
 
+variable "vpc_ip_range" {
+  description = "ipv4 address cidr for vpc"
+  default     = "192.168.160.0/24O"
+}
+
 provider "digitalocean" {
     token = var.do_token
 }
