@@ -42,7 +42,7 @@ resource "digitalocean_droplet" "web" {
   volume_ids = [element(digitalocean_volume.data.*.id, count.index)]
 
   # Tags for identifying the droplets and allowing db firewall access
-  tags = ["${var.name}-webserver", "Haplolabs Testing Infrastructure"]
+  tags = ["${var.name}-webserver", "Haplolabs_Testing"]
 
   #--------------------------------------------------------------------------#
   # Use user data, also known as cloud-init, to do an initial configuration  #
