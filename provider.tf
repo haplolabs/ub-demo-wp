@@ -31,7 +31,7 @@ variable "pvt_key" {
 
 variable "vpc_ip_range" {
   description = "ipv4 address cidr for vpc"
-  default     = "192.168.160.0/24O"
+  default     = "192.168.160.0/24"
 }
 
 provider "digitalocean" {
