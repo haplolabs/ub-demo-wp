@@ -12,3 +12,9 @@ output "web_loadbalancer_fqdn" {
 output "web_servers_private" {
     value = digitalocean_droplet.web.*.ipv4_address_private
 }
+
+# The Public IPv4 Addresses of the droplets
+output "web_servers_public" {
+    value = digitalocean_droplet.web.*.ipv4_address_public
+}
+
