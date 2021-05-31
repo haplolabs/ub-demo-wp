@@ -15,6 +15,6 @@ output "web_servers_private" {
 
 # The Public IPv4 Addresses of the droplets
 output "web_servers_public" {
-    value = digitalocean_droplet.web.*.ipv4_address_public
+    value = digitalocean_droplet.web.*.ipv4_address
 }
 
